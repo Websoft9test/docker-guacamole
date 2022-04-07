@@ -21,7 +21,7 @@
 
   "services":[
     {
-      "name": "guacamole-server",
+      "name": "guacamole-web",
       "port": "9001",
       "description_cn": "浏览器访问 Guacamole",
       "description_en": "Web-GUI database management tool",
