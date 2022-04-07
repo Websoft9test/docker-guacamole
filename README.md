@@ -53,7 +53,7 @@ If you have not install Docker and Docker-Compose, refer to the following comman
 
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
-curl -L "https://github.com/docker/compose/releases/download/1.29.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+curl -L "https://github.com/docker/compose/releases/download/v2.1.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ln -sf /usr/local/bin/docker-compose  /usr/bin
 sudo systemctl start docker
@@ -70,7 +70,7 @@ echo aaa
 echo bbb  
 # .env file's [SITE_NAME] should  be changed to public IP or domain name to be accessed by Internet  
 # The default startup is erpnext12. If you want to run erpnext13, you only need to change ERPNEXT_VERSION/FRAPPE_VERSIO to V13  
-docker-compose -f docker-compose.yml  --env-file  .env up -d
+docker-compose  up -d
 ```
 
 ### FAQ
@@ -83,13 +83,11 @@ You should modify ports at [docker-compose file](docker-compose-production.yml) 
 
 #### question1  
 answer1  
-
 #### question2  
 answer2  
-
 ### Usage instructions
 
-You can point your browser to: *`http://Instance's Internet IP:9002`*  
+You can point your browser to: *`http://Instance's Internet IP:port`*  
 
 The following is the information that may be needed during use
 
