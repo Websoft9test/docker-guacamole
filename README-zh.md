@@ -70,10 +70,6 @@ sudo systemctl start docker
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-guacamole
 cd docker-guacamole
-echo aaa  
-echo bbb  
-# .env文件的SITE_NAME需要修改成公网IP或者域名才能被外网访问  
-# 默认启动的是ERPNext12，如果您想运行ERPNext13,只需将ERPNEXT_VERSION、FRAPPE_VERSION修改成v13  
 sudo docker-compose up -d
 ```
 
@@ -87,10 +83,6 @@ sudo docker-compose up -d
 
 修改 [docker-compose](docker-compose.yml) 文件中冲突的端口，然后再启动容器
 
-#### 问题1  
-答案1  
-#### 问题2  
-答案2  
 ### 使用说明
 
 启动应用后，本地浏览器访问 URL: *`http://服务器公网IP:端口`* 进入应用。  
@@ -109,8 +101,7 @@ sudo docker-compose up -d
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| guacamole-server | 9002 | 浏览器访问 Guacamole | Y |
-| phpmyadmin | 9090 | 数据库可视化管理工具 | Y |
+| guacamole-server | 9001 | 浏览器访问 Guacamole | Y |
 ## 文档
 
 [Guacamole 管理员手册](https://support.websoft9.com/docs/guacamole)

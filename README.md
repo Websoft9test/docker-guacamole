@@ -66,10 +66,6 @@ We assume that you are already familiar with Docker, and you can modify [docker-
 ```
 git clone --depth=1 https://github.com/Websoft9/docker-guacamole
 cd docker-guacamole
-echo aaa  
-echo bbb  
-# .env file's [SITE_NAME] should  be changed to public IP or domain name to be accessed by Internet  
-# The default startup is erpnext12. If you want to run erpnext13, you only need to change ERPNEXT_VERSION/FRAPPE_VERSIO to V13  
 docker-compose  up -d
 ```
 
@@ -81,10 +77,6 @@ Yes, you should modify all database password and application password at docker-
 #### Docker runing failed for the reason that port conflict?
 You should modify ports at [docker-compose file](docker-compose-production.yml) and docker-compose again
 
-#### question1  
-answer1  
-#### question2  
-answer2  
 ### Usage instructions
 
 You can point your browser to: *`http://Instance's Internet IP:port`*  
@@ -103,8 +95,7 @@ By default, the available users are:
 
 | Service | Port | Use |  Necessity |
 | --- | --- | --- | --- |
-| guacamole-server | 9002 | Web-GUI database management tool | Y |
-| phpmyadmin | 9090 | Web-GUI database management tool | Y |
+| guacamole-server | 9001 | Web-GUI database management tool | Y |
 ## Documentation
 
 [Guacamole Administrator Guide](https://support.websoft9.com/docs/guacamole)
