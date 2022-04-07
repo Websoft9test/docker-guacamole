@@ -89,13 +89,13 @@ By default, the available users are:
 
 | Username    | Password |
 | ------- | -------- |
-|  admin | 123456  |
+|  guacadmin | guacadmin  |
 
 #### Services and Ports
 
 | Service | Port | Use |  Necessity |
 | --- | --- | --- | --- |
-| guacamole-server | 9001 | Web-GUI database management tool | Y |
+| guacamole-web | 9001 | Web-GUI database management tool | Y |
 ## Documentation
 
 [Guacamole Administrator Guide](https://support.websoft9.com/docs/guacamole)

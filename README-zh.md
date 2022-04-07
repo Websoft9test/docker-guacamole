@@ -95,13 +95,13 @@ sudo docker-compose up -d
 
 | 用户名    | 密码 |
 | ------- | -------- |
-|  admin | 123456  |
+|  guacadmin | guacadmin  |
 
 #### 服务和端口
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| guacamole-server | 9001 | 浏览器访问 Guacamole | Y |
+| guacamole-web | 9001 | 浏览器访问 Guacamole | Y |
 ## 文档
 
 [Guacamole 管理员手册](https://support.websoft9.com/docs/guacamole)
