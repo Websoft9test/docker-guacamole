@@ -3,7 +3,7 @@
   "trademark": "Guacamole",
   "installpath": "/data/wwwroot/guacamole",
   "compose_file": "docker-compose.yml",
-  "fork_url": "https://github.com/apache/guacamole-server",
+  "fork_url": "https://github.com/boschkundendienst/guacamole-docker-compose",
   "env_file": ".env",
   "requirements":{
     "cpu_arch": "Linux x86-64, ARM 32/64, Windows x86-64, IBM POWER8, x86/i686",
@@ -11,7 +11,7 @@
     "memory": "4",
     "disk": "20",
     "swap": "2",
-    "url": "https://github.com/guacamole/docker#recommended-system-requirements"
+    "url": "https://guacamole.incubator.apache.org/doc/gug/introduction.html"
   },
 
   "user": {
