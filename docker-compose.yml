@@ -16,7 +16,7 @@ services:
       
   guacamole-preparation:
     image: guacamole/guacamole:${APP_VERSION}
-    entrypoint: [ "bash", "-c", "/opt/guacamole/bin/initdb.sh --postgres > /opt/guacamole/init/initdb.sql"]
+    entrypoint: [ "bash", "-c", "/opt/guacamole/bin/initdb.sh --postgres > /opt/guacamole/init/initdb.sql && chmod -R +x /opt/guacamole/init"]
     volumes:
       - ./init:/opt/guacamole/init
     restart: on-failure
