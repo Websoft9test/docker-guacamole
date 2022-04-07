@@ -8,14 +8,23 @@ services:
     container_name: ${APP_CONTAINER_NAME}-guacd
     image: guacamole/guacd
     restart: always
+    depends_on:
+      - guacamole-preparation
     volumes:
       - drive:/drive:rw
       - record:/record:rw
-
+      
+  guacamole-preparation:
+    image: guacamole/guacamole:${APP_VERSION}
+    command: /opt/guacamole/bin/initdb.sh --postgres > ./init/initdb.sql
+    restart: on-failure
+    
   postgres:
     image: postgres:${DB_POSTGRES_VERSION}
     restart: always
     container_name: ${APP_CONTAINER_NAME}-postgres
+    depends_on:
+      - guacamole-preparation
     environment:
       PGDATA: /var/lib/postgresql/data/guacamole
       POSTGRES_DB: ${DB_POSTGRES_NAME}
@@ -32,6 +41,7 @@ services:
     depends_on:
      - guacd
      - postgres
+     - guacamole-preparation
     environment:
       GUACD_HOSTNAME: guacd
       POSTGRES_DATABASE: ${DB_POSTGRES_NAME}
