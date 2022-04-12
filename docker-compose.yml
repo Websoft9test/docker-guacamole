@@ -1,5 +1,4 @@
 # The default username is guacadmin with password guacadmin.
-# 
 
 version: '3.8'
 
