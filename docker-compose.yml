@@ -36,7 +36,9 @@ services:
     volumes:
       - ./init:/docker-entrypoint-initdb.d:ro
       - postgres:/var/lib/postgresql/data:rw
-
+    ports:
+      - 5432:5432
+      
   guacamole:
     image: guacamole/guacamole:${APP_VERSION}
     container_name: ${APP_CONTAINER_NAME}
